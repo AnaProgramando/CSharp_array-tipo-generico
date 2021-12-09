@@ -1,0 +1,7 @@
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\bin\Debug\CSharp.BancoVirtual.Modelos.dll
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\bin\Debug\CSharp.BancoVirtual.Modelos.pdb
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\obj\Debug\CSharp.BancoVirtual.Modelos.csproj.AssemblyReference.cache
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\obj\Debug\CSharp.BancoVirtual.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\obj\Debug\CSharp.BancoVirtual.Modelos.dll
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\obj\Debug\CSharp.BancoVirtual.Modelos.pdb
+C:\Users\anabv\Documents\Programacao\CSharp\CSharp_Biblioteca-DLL-Documentacao-NuGet\CSharp.BancoVirtual.Modelos\bin\Debug\CSharp.BancoVirtual.Modelos.xml

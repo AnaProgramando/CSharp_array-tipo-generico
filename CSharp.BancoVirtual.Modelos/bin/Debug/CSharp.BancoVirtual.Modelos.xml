@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharp.BancoVirtual.Modelos</name>
+    </assembly>
+    <members>
+        <member name="T:CSharp.BancoVirtual.Modelos.ContaCorrente">
+            <summary>
+            Define uma Conta Corrente do banco.
+            </summary>
+        </member>
+        <member name="M:CSharp.BancoVirtual.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)">
+             <summary>
+             Cria uma instância de ContaCorrente com os argumentos utilizados
+             </summary>
+            <param name="agencia">Representa o valor da proprieddae <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Agencia" /> e deve possuir um valor maior que zero.</param>
+            <param name="numero">Representa o valor da proprieddae <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Numero"/> e deve possuir um valor maior que zero.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CSharp.BancoVirtual.Modelos.ContaCorrente.Sacar(System.Double)" -->
+    </members>
+</doc>
