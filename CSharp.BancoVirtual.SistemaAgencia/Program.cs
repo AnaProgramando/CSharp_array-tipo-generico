@@ -195,7 +195,56 @@ namespace CSharp.BancoVirtual.SistemaAgencia
             int indiceTesteTres = NumtesteIndice[2 + 1];
             Console.WriteLine("Retorno guardado em outra variável recebendo a soma de 2 + 1 no indiceTesteTres: " + indiceTesteTres);
 
-            
+            Console.WriteLine("");
+            Console.WriteLine("Aperte o Enter para continuar >>");
+
+            Console.ReadLine();
+
+            // ----------------------------------------------------------------------------------------------
+
+            Console.WriteLine("_ARRAY - Calculando média_");
+
+            int[] NumtesteIdades = new int[6];
+            NumtesteIdades[0] = 13;
+            NumtesteIdades[1] = 23;
+            NumtesteIdades[2] = 43;
+            NumtesteIdades[3] = 53;
+            NumtesteIdades[4] = 63;
+            NumtesteIdades[5] = 73;
+
+            // A propriedade Length representa o número de elementos que o array possui
+
+            // Será impresso na tela o tamanho do array criado, no caso 6
+            Console.WriteLine("O tamanho do ARRAY é de " + NumtesteIdades.Length + " posições.");
+            Console.WriteLine("");
+
+            // Variável acumuladora
+            int acumulador = 0;
+
+            // Laço de repetição aumentando o indiceIdades
+            // Começando pela primeira posição, o NumtesteIdades[0]
+            // Indo até e incluindo o NumtesteIdades[4]
+            // Incrementa o indiceIdades
+            // Usando a propriedade Length, não é necessário usar o "<= 6", pois calcula sozinho o tamanho do array
+            // Nesse caso, como o Lenght irá retornar 6 e o índice na posição 6 vai apontar para um valor que não existe na memória, não usei o "<=", e sim o "<"
+            for (int indiceIdades = 0; indiceIdades < NumtesteIdades.Length; indiceIdades++)
+            {
+                int idades = NumtesteIdades[indiceIdades];
+
+                // Coloquei o $ e {} para interpolar a string e simplificar a concatenação
+                Console.WriteLine($"Acessando o array idades no índice {indiceIdades}.");
+
+                Console.WriteLine($"Valor de idades[{indiceIdades}] = {idades}");
+                Console.WriteLine("");
+
+                acumulador += idades;
+            }
+
+            // Ao invés de dividir o acumulador por 6, basta utilizar a propriedade Length junto ao nome da variável do array.
+            // Assim mesmo que sejam adicionados novos elementos ao array, não é necessário contar quantos são e mexer no divisor da média, ele calculará corretamente contando automáticamente o total de elementos do array
+            int media = acumulador / NumtesteIdades.Length;
+
+            Console.WriteLine($"A média das idades é: {media}.");
 
             Console.ReadLine();
         }
