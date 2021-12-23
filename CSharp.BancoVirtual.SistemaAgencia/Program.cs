@@ -13,6 +13,53 @@ namespace CSharp.BancoVirtual.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("_Inicializador de array_");
+
+            // Sintaxe: 
+            // Tipo (ContaCorrente)
+            // par de colchetes []
+            // nome
+            // Atribuição de valor (new)
+
+            // Colocar o número de conta correntes desejado "new ContaCorrente[3]", ou deixar vazio e fazer com {} da forma abaixo
+            // Mantendo o número dentro dos colchetes [], surge o erro "System.NullReferenceException" ao mudar a quantidade de referências, pois o o número de posições do array será equivalente ao número de atribuições realizadas
+            // Ao criar o array as posições adquirem o valor padrão do tipo do array, logo recebe várias referências nulas, pois ContaCorrente é um tipo de referência, e o valor padrão de todo tipo de referência é o nulo
+
+            // Array de conta-corrente, pois existe a classe (o tipo) ContaCorrente, logo não é necessário de criar um array para o número da conta, número da agência e saldo
+            // Criando uma referência para um array de conta-corrente
+
+            // Da forma abaixo é criada cada conta-corrente individualmente, e os objetos apenas possuem uma referência para eles no array, logo o código fica se repetindo
+            // ContaCorrente[] contas = new ContaCorrente[3];
+            // contas[0] = new ContaCorrente(874, 5679787);
+            // contas[1] = new ContaCorrente(874, 4456668);
+            // contas[2] = new ContaCorrente(874, 7781438);
+
+            // A melhor forma de fazer é utilizando um açúcar sintático "inicialização de arrays" do C# para facilitar a criação dos arrays
+            // Não é necessário identificar o número de itens do array para em seguida acessar os valores em cada índice e fazer as atribuições, basta usar as chaves {} e preenchê-la com os valores para cada posição
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                // Preenchendo o array com os números de agência e conta
+                // 
+                new ContaCorrente(123, 1234567),
+                new ContaCorrente(123, 1234568),
+                new ContaCorrente(123, 1234569),
+            };
+
+            for (int indice = 0; indice < contas.Length; indice++)
+            {
+                // Ao invés de armazenar em uma variável o valor que está armazenado no índice do array:
+                // Console.WriteLine($"Conta {indice} {contas[indice].Numero}");
+
+                // É possível escrever uma expressão que retorna uma conta-corrente, acessando um valor do array e colocando o ponto "." para navegar para a propriedade Numero
+                // A variável contaAtual recebe a referência de contas no indice da variável do loop, não é necessário escrever um código longo na interpolação da string, assim acesso a nova variável, a contaAtual
+                ContaCorrente contaAtual = contas[indice];
+                Console.WriteLine($"Conta {indice} {contaAtual.Numero}");
+            }
+
+            Console.ReadLine();
+        }
+        static void TestaArrayInt()
+        {
             // ----------------------------------------------------------------------------------------------
 
             // Criação de variável:
@@ -57,12 +104,12 @@ namespace CSharp.BancoVirtual.SistemaAgencia
             // 01234
             // O índice "t" é 0, índice "e" o 1, e assim por diante
 
-            numTeste[0]= 15;
-            numTeste[1]= 28;
-            numTeste[2]= 35;
-            numTeste[3]= 50;
-            numTeste[4]= 55;
-            
+            numTeste[0] = 15;
+            numTeste[1] = 28;
+            numTeste[2] = 35;
+            numTeste[3] = 50;
+            numTeste[4] = 55;
+
 
             Console.WriteLine("Número informado no índice 0: " + numTeste[0]);
             Console.WriteLine("Número informado no índice 1: " + numTeste[1]);
@@ -99,7 +146,7 @@ namespace CSharp.BancoVirtual.SistemaAgencia
             // Aqui NumtestesNoIndice2 recebe um valor do array, acessa a posição 2, pega nela o valor 22 e atribui (copia) para a variável
             // Tipo_da_variavel nome_da_variavel = recebendo_o_array[acessando_o_valor_na_posição_2]
             int NumtestesNoIndice2 = NumtesteDois[2];
-            
+
             Console.WriteLine("Número informado no índice 2 guardado em uma variável: " + NumtestesNoIndice2);
 
             int NumtestesNoIndice3 = NumtesteDois[3];
