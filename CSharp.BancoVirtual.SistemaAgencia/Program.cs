@@ -13,6 +13,31 @@ namespace CSharp.BancoVirtual.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+
+            ContaCorrente contaAna = new ContaCorrente(123, 1234567);
+
+            lista.Adicionar(contaAna);
+
+            lista.Adicionar(new ContaCorrente(123, 1234561));
+            lista.Adicionar(new ContaCorrente(123, 1234562));
+            lista.Adicionar(new ContaCorrente(123, 1234563));
+            lista.Adicionar(new ContaCorrente(123, 1234564));
+            lista.Adicionar(new ContaCorrente(123, 1234565));
+            lista.Adicionar(new ContaCorrente(123, 1234566));
+            lista.Adicionar(new ContaCorrente(123, 1234567));
+            lista.Adicionar(new ContaCorrente(123, 1234568));
+            lista.Adicionar(new ContaCorrente(123, 1234569));
+            lista.Adicionar(new ContaCorrente(123, 1234560));
+            lista.Adicionar(new ContaCorrente(123, 1234570));
+
+            // lista.Remover(contaAna);
+
+            Console.ReadLine();
+        }
+
+        static void TestaArrayDeContaCorrente()
+        {
             Console.WriteLine("_Inicializador de array_");
 
             // Sintaxe: 
@@ -30,16 +55,15 @@ namespace CSharp.BancoVirtual.SistemaAgencia
 
             // Da forma abaixo é criada cada conta-corrente individualmente, e os objetos apenas possuem uma referência para eles no array, logo o código fica se repetindo
             // ContaCorrente[] contas = new ContaCorrente[3];
-            // contas[0] = new ContaCorrente(874, 5679787);
-            // contas[1] = new ContaCorrente(874, 4456668);
-            // contas[2] = new ContaCorrente(874, 7781438);
+            // contas[0] = new ContaCorrente(123, 1234567);
+            // contas[1] = new ContaCorrente(123, 1234568);
+            // contas[2] = new ContaCorrente(123, 1234569);
 
             // A melhor forma de fazer é utilizando um açúcar sintático "inicialização de arrays" do C# para facilitar a criação dos arrays
             // Não é necessário identificar o número de itens do array para em seguida acessar os valores em cada índice e fazer as atribuições, basta usar as chaves {} e preenchê-la com os valores para cada posição
             ContaCorrente[] contas = new ContaCorrente[]
             {
                 // Preenchendo o array com os números de agência e conta
-                // 
                 new ContaCorrente(123, 1234567),
                 new ContaCorrente(123, 1234568),
                 new ContaCorrente(123, 1234569),
@@ -55,9 +79,8 @@ namespace CSharp.BancoVirtual.SistemaAgencia
                 ContaCorrente contaAtual = contas[indice];
                 Console.WriteLine($"Conta {indice} {contaAtual.Numero}");
             }
-
-            Console.ReadLine();
         }
+
         static void TestaArrayInt()
         {
             // ----------------------------------------------------------------------------------------------
