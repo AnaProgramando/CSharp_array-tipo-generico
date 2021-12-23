@@ -6,16 +6,23 @@
     <members>
         <member name="T:CSharp.BancoVirtual.Modelos.ContaCorrente">
             <summary>
-            Define uma Conta Corrente do banco.
+            Define uma Conta Corrente do banco ByteBank.
             </summary>
         </member>
         <member name="M:CSharp.BancoVirtual.Modelos.ContaCorrente.#ctor(System.Int32,System.Int32)">
-             <summary>
-             Cria uma instância de ContaCorrente com os argumentos utilizados
-             </summary>
-            <param name="agencia">Representa o valor da proprieddae <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Agencia" /> e deve possuir um valor maior que zero.</param>
-            <param name="numero">Representa o valor da proprieddae <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Numero"/> e deve possuir um valor maior que zero.</param>
+            <summary>
+            Cria uma instância de ContaCorrente com os argumentos utilizados.
+            </summary>
+            <param name="agencia"> Representa o valor da propriedade <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Agencia"/> e deve possuir um valor maior que zero. </param>
+            <param name="numero"> Representa o valor da propriedade <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Numero"/> e deve possuir um valor maior que zero. </param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:CSharp.BancoVirtual.Modelos.ContaCorrente.Sacar(System.Double)" -->
+        <member name="M:CSharp.BancoVirtual.Modelos.ContaCorrente.Sacar(System.Double)">
+            <summary>
+            Realiza o saque e atualiza o valor da propriedade <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Saldo"/>.
+            </summary>
+            <exception cref="T:System.ArgumentException"> Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>. </exception>
+            <exception cref="T:CSharp.BancoVirtual.Modelos.SaldoInsuficienteException"> Exceção lançada quando o valor de <paramref name="valor"/> é maior que o valor da propriedade <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Saldo"/>. </exception>
+            <param name="valor"> Representa o valor do saque, deve ser maior que 0 e menor que o <see cref="P:CSharp.BancoVirtual.Modelos.ContaCorrente.Saldo"/>. </param>
+        </member>
     </members>
 </doc>

@@ -13,27 +13,78 @@ namespace CSharp.BancoVirtual.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+            Lista<int> idades = new Lista<int>();
 
-            ContaCorrente contaAna = new ContaCorrente(123, 1234567);
+            idades.Adicionar(5);
+            idades.AdicionarVarios(1, 5, 78);
 
-            lista.Adicionar(contaAna);
+            Console.WriteLine(SomarVarios(1, 2, 3, 5, 56465, 45));
+            Console.WriteLine(SomarVarios(1, 2, 45));
 
-            lista.Adicionar(new ContaCorrente(123, 1234561));
-            lista.Adicionar(new ContaCorrente(123, 1234562));
-            lista.Adicionar(new ContaCorrente(123, 1234563));
-            lista.Adicionar(new ContaCorrente(123, 1234564));
-            lista.Adicionar(new ContaCorrente(123, 1234565));
-            lista.Adicionar(new ContaCorrente(123, 1234566));
-            lista.Adicionar(new ContaCorrente(123, 1234567));
-            lista.Adicionar(new ContaCorrente(123, 1234568));
-            lista.Adicionar(new ContaCorrente(123, 1234569));
-            lista.Adicionar(new ContaCorrente(123, 1234560));
-            lista.Adicionar(new ContaCorrente(123, 1234570));
-
-            // lista.Remover(contaAna);
 
             Console.ReadLine();
+        }
+
+        static void TestaListaDeObject()
+        {
+            ListaDeObject listaDeIdades = new ListaDeObject();
+
+            listaDeIdades.Adicionar(10);
+            listaDeIdades.Adicionar(5);
+            listaDeIdades.Adicionar(4);
+            listaDeIdades.Adicionar("texto teste");
+            listaDeIdades.AdicionarVarios(16, 23, 60);
+
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                int idade = (int)listaDeIdades[i];
+                Console.WriteLine($"Idade no indice {i}: {idade}");
+            }
+        }
+
+        static int SomarVarios(params int[] numeros)
+        {
+            int acumulador = 0;
+            foreach (int numero in numeros)
+            {
+                acumulador += numero;
+            }
+            return acumulador;
+        }
+
+        static void TestaListaDeContaCorrente()
+        {
+            //ListaDeContaCorrente lista = new ListaDeContaCorrente();
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+
+            ContaCorrente contaAna = new ContaCorrente(11111, 1111111);
+
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                contaAna,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679754)
+            };
+
+            lista.AdicionarVarios(contas);
+
+            lista.AdicionarVarios(
+                contaAna,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679787)
+            );
+
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
         }
 
         static void TestaArrayDeContaCorrente()
