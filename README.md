@@ -1,7 +1,7 @@
 ![banner_Acesso-API-Cotacao](https://github.com/AnaProgramando/CSharp_array-tipo-generico/blob/38af6f4672a895a976ea072e76f12c482f87974a/banner_array-tipo-generico.png)
 ----
 
-<img src="https://img.shields.io/static/v1?label=Status&message=incomplete&color=FFA500&style=for-the-badge"/>
+<img src="https://img.shields.io/static/v1?label=Status&message=complete&color=32CD32&style=for-the-badge"/>
 
 <p align="center"> O curso desse projeto está disponível na Plataforma da <a href="https://www.alura.com.br/" > Alura </a> </p>
 
